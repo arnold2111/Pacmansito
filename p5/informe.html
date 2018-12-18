@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
+		<title>Informacio del Sistema</title>
+		<style>
+		
+			.button {
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;			
+			
+			}
+			
+			.button5 {background-color: #555555;} /* Black */
+			
+		
+		
+		</style>
+	</head>
+		<body>
+			<div align="center">
+			<button class="button button5" onclick="history.back()" >Endarrere</button>
+			<button onclick="history.go(-1)" ></button>
+			<div/>
+			<div align="left">
+				<font face="Indian Verdana" size="4" color="#6E6E6E">
+					<script>
+						document.write('<br><br><b>Navegador utilitzat: </b>'+bowser.name);
+						document.write('<br><b>Versio del navegador: </b>'+bowser.version);
+						var OSName="Desconocido";
+						if (navigator.appVersion.indexOf("Win")!=-1){ 
+							OSName="Windows";
+						}else if (navigator.appVersion.indexOf("Mac")!=-1){ 
+							OSName="MacOS";
+						}else if (navigator.appVersion.indexOf("X11")!=-1){
+							OSName="UNIX";
+						}else if (navigator.appVersion.indexOf("Linux")!=-1){
+							OSName="Linux";
+						}else if (navigator.appVersion.indexOf("Android")!=-1){
+							OSName="Android";
+						}
+						document.write('<br><b>Hostname: </b>'+window.location.href);
+						document.write('<br><b>Sistema Operatiu: </b>'+OSName);
+						document.write('<br><b>Idioma: </b>'+window.navigator.language);
+						document.write('<br><b>La darrera modificacio: </b>'+document.lastModified);
+					</script>
+				</font>
+			</div>
+	</body>
+</html>
